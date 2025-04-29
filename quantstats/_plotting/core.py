@@ -766,9 +766,9 @@ def plot_distribution(
 
     # Resample returns
     port["Weekly"] = port["Daily"].resample("W-MON").apply(apply_fnc).ffill()
-    port["Monthly"] = port["Daily"].resample("M").apply(apply_fnc).ffill()
-    port["Quarterly"] = port["Daily"].resample("Q").apply(apply_fnc).ffill()
-    port["Yearly"] = port["Daily"].resample("Y").apply(apply_fnc).ffill()
+    port["Monthly"] = port["Daily"].resample("ME").apply(apply_fnc).ffill()
+    port["Quarterly"] = port["Daily"].resample("QE").apply(apply_fnc).ffill()
+    port["Yearly"] = port["Daily"].resample("YE").apply(apply_fnc).ffill()
 
     # Create box plots for each frequency
     fig = go.Figure()
