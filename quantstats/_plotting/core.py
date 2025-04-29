@@ -65,6 +65,8 @@ _FLATUI_COLORS = [
     "#4A5899",
 ]
 
+_default_fontname = "sans-serif"
+
 
 def _get_colors():
     colors = _FLATUI_COLORS
@@ -86,7 +88,7 @@ def plot_returns_bars(
     match_volatility=False,
     log_scale=False,
     figsize=(10, 6),
-    fontname="Arial",
+    fontname=_default_fontname,
     ylabel=True,
     subtitle=True,
     savefig=None,
@@ -197,7 +199,7 @@ def plot_timeseries(
     log_scale=False,
     lw=1.5,
     ylabel="",
-    fontname="Arial",
+    fontname=_default_fontname,
     subtitle=True,
     savefig=None,
     show=True,
@@ -325,7 +327,7 @@ def plot_histogram(
     benchmark,
     resample="ME",
     bins=20,
-    fontname="Arial",
+    fontname=_default_fontname,
     title="Returns",
     kde=True,
     figsize=(10, 6),
@@ -472,7 +474,7 @@ def plot_rolling_stats(
     lw=1.5,
     figsize=(10, 6),
     ylabel="",
-    fontname="Arial",
+    fontname=_default_fontname,
     subtitle=True,
     savefig=None,
     show=True,
@@ -563,7 +565,7 @@ def plot_rolling_beta(
     title="",
     hlcolor="red",
     figsize=(10, 6),
-    fontname="Arial",
+    fontname=_default_fontname,
     lw=1.5,
     ylabel=True,
     subtitle=True,
@@ -662,7 +664,7 @@ def plot_longest_drawdowns(
     returns,
     periods=5,
     lw=1.5,
-    fontname="Arial",
+    fontname=_default_fontname,
     title=None,
     log_scale=False,
     figsize=(10, 6),
@@ -748,7 +750,7 @@ def plot_longest_drawdowns(
 
 def plot_distribution(
     returns,
-    fontname="Arial",
+    fontname=_default_fontname,
     compounded=True,
     title=None,
     savefig=None,
