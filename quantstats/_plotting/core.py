@@ -65,8 +65,6 @@ _FLATUI_COLORS = [
     "#4A5899",
 ]
 
-_plt.rcParams["font.family"] = "Arial"
-
 
 def _get_colors():
     colors = _FLATUI_COLORS
